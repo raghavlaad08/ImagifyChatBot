@@ -12,7 +12,7 @@ const app = express();
 connectDB();
 
 // Middleware
-app.use(cors({origin : "https://imagify-delta-eight.vercel.app/"}));
+app.use(cors({origin : "*"}));
 app.use(express.json());
 
 // Routes
