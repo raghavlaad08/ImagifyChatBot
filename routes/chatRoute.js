@@ -5,7 +5,7 @@ import { protect } from "../middlewares/auth.js";
 const chatRouter = express.Router();
 
 // Create new chat → POST
-chatRouter.get('/create', protect, createChat);
+chatRouter.post('/create', protect, createChat);
 
 // Get all chats → GET
 chatRouter.get('/get', protect, getChats);
