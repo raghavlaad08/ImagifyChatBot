@@ -46,7 +46,7 @@ export const textMessageController = async (req, res) => {
 
         chat.messages.push(reply);
         await chat.save();
-
+        console.log(userId)
         await User.updateOne({ _id: userId }, { $inc: { credits: -1 } });
 
     } catch (error) {
