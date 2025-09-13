@@ -7,7 +7,7 @@ import open_ai from '../configs/openai_api.js';
 // Text based AI chat Message Controller
 export const textMessageController = async (req, res) => {
     try {
-        const userId = req.user._id;
+        const userId = req.user;
 
         //check credits 
         if (req.user.credits < 1) {
