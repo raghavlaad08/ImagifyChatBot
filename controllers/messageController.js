@@ -8,6 +8,7 @@ import open_ai from '../configs/openai_api.js';
 export const textMessageController = async (req, res) => {
     try {
         const userId = req.user;
+        console.log(userId, "userId")
 
         //check credits 
         if (req.user.credits < 1) {
